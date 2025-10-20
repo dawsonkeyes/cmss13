@@ -360,6 +360,7 @@
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	item_icons = list(
 		WEAR_BACK = 'icons/mob/humans/onmob/hunter/pred_gear.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/hunter/pred_gear.dmi',
 		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
 	)
@@ -1822,7 +1823,7 @@
 	storage_slots = 8
 	max_storage_space = 20
 	icon_state = "quiver"
-	item_state = "s_marinebelt"
+	item_state = "quiver"
 	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE|SLOT_BACK // it's a quiver, quivers go on your back
 	max_w_class = SIZE_LARGE
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
@@ -1830,6 +1831,12 @@
 		WEAR_BACK = 'icons/mob/humans/onmob/hunter/pred_gear.dmi',
 		WEAR_WAIST = 'icons/mob/humans/onmob/hunter/pred_gear.dmi',
 		WEAR_J_STORE = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
+	)
+	item_state_slots = list(
+		WEAR_BACK = "quiver",
+		WEAR_J_STORE = "quiver",
+		WEAR_L_HAND = "s_marinebelt",
+		WEAR_R_HAND = "s_marinebelt"
 	)
 	can_hold = list(
 		/obj/item/weapon/gun/bow,
