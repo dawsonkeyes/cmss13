@@ -1847,6 +1847,7 @@
 
 /obj/item/storage/belt/gun/update_icon() // this is a belt subtype, so we need to add code for it to update the icon when worn on your back
 	. = ..()
+	var/mob/living/carbon/human/user = loc
 	if(istype(user))
 		if(src == user.back)
 			user.update_inv_back()
