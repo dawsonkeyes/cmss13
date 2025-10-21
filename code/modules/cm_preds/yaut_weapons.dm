@@ -1845,7 +1845,7 @@
 	explo_proof = TRUE
 	unacidable = TRUE
 
-/obj/item/storage/belt/gun/update_icon() // this is a belt subtype, so we need to add code for it to update the icon when worn on your back
+/obj/item/storage/belt/gun/quiver/update_icon()
 	. = ..()
 	var/mob/living/carbon/human/user = loc
 	if(istype(user))
