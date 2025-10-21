@@ -1845,6 +1845,12 @@
 	explo_proof = TRUE
 	unacidable = TRUE
 
+/obj/item/storage/belt/gun/update_icon() // this is a belt subtype, so we need to add code for it to update the icon when worn on your back
+	. = ..()
+	if(istype(user))
+		if(src == user.back)
+			user.update_inv_back()
+
 /obj/item/storage/belt/gun/quiver/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/bow())
 	for(var/i = 1 to storage_slots - 1)
