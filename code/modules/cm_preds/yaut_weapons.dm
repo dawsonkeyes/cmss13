@@ -1845,13 +1845,6 @@
 	explo_proof = TRUE
 	unacidable = TRUE
 
-/obj/item/storage/belt/gun/quiver/update_icon()
-	. = ..()
-	var/mob/living/carbon/human/user = loc
-	if(istype(user))
-		if(src == user.back)
-			user.update_inv_back()
-
 /obj/item/storage/belt/gun/quiver/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/bow())
 	for(var/i = 1 to storage_slots - 1)
